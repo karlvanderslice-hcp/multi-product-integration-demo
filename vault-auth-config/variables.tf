@@ -1,5 +1,5 @@
 variable "tfc_organization" {
-  type    = string
+  type = string
 }
 
 variable "stack_id" {
