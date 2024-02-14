@@ -1,5 +1,12 @@
 # Multi Product Integration Demo
 
+```
+TODO:
+  - PreCommit
+  - GitOps
+  - GitHub setup in Control-workspace
+```
+
 ## Overview 
 
 This repository is intended to help members of WWTFO quickly create reproducable demo environments which showcase:
@@ -102,6 +109,7 @@ terraform apply -var "tfc_organization=something"
 |oauth_token_id|\<the ot- ID of your OAuth connection\>|no|terraform|
 |repo_identifier|djschnei21/multi-product-integration-demo|no|terraform|
 |tfc_project_id|\<the prj- ID of your TFC Project\>|no|terraform|
+|aws_access_id|ID from doormat|no|terraform
 
 ## Building the Nomad AMI using Packer
 
