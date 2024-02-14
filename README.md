@@ -58,6 +58,8 @@ The entire environment is orchestrated by the "control-workspace" directory.  Af
 
 ### Preparing your AWS account to leverage the doormat provider on TFC:
 
+**Be sure to configure TFC for Doormat [according to the setup docs](https://docs.prod.secops.hashicorp.services/doormat/tf_provider/)**
+
 1) navigate to the doormat-prereqs directory
 ```
 cd doormat-prereqs/
@@ -100,6 +102,7 @@ terraform apply -var "tfc_organization=something"
 |HCP_PROJECT_ID|\<your HCP Project ID retrieved from HCP\>|no|env|
 |TFC_WORKLOAD_IDENTITY_AUDIENCE|\<can be literally anything\>|no|env|
 |TFE_TOKEN|\<TFC User token\>|yes|env|
+|aws_account_id|AWS account ID from Doormat|no|terraform|
 
 4) Create a new workspace within your TFC project called "0_control-workspace", attaching it to this VCS repository, specifying the working directory as "control-workspace"
 5) Create the following workspace variables within "0_control-workspace":
@@ -109,7 +112,6 @@ terraform apply -var "tfc_organization=something"
 |oauth_token_id|\<the ot- ID of your OAuth connection\>|no|terraform|
 |repo_identifier|djschnei21/multi-product-integration-demo|no|terraform|
 |tfc_project_id|\<the prj- ID of your TFC Project\>|no|terraform|
-|aws_access_id|ID from doormat|no|terraform
 
 ## Building the Nomad AMI using Packer
 
