@@ -5,6 +5,9 @@ TODO:
   - PreCommit
   - GitOps
   - GitHub setup in Control-workspace
+  - TLS on Load Balancer
+  - HVD?
+  - More app examples
 ```
 
 ## Overview 
@@ -114,6 +117,8 @@ terraform apply -var "tfc_organization=something"
 |tfc_project_id|\<the prj- ID of your TFC Project\>|no|terraform|
 
 ## Building the Nomad AMI using Packer
+
+Do this for both the RHEL and Ubuntu images.
 
 1) navigate to the packer directory
 ```
